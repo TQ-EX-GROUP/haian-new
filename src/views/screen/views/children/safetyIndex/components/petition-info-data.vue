@@ -27,6 +27,13 @@ export default {
       currentNums: [0, 0, 0, 0, 0],
     }
   },
+  watch: {
+    data() {
+      if (this.data.length > 0) {
+        this.generateChart()
+      }
+    },
+  },
   mounted() {
     if (this.data.length > 0) {
       this.generateChart()
