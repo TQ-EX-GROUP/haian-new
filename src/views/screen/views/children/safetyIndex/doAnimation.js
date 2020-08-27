@@ -11,11 +11,13 @@ class doAnimation {
       const { series } = options
       const dom = this.chart._dom
       const length = series.map((item) => item.data.length).reduce((i, t) => (i > t ? i : t), 0)
+      console.log(this)
+      const _this = this
       this.chart.on('mouseover', _ => {
         console.log(this)
         this.showMovie = false
         for (let f = 0; f < series.length; f++) {
-          this.chart.dispatchAction({
+          _this.chart.dispatchAction({
             type: 'downplay',
             seriesIndex: f,
           })
@@ -24,12 +26,13 @@ class doAnimation {
           type: 'highlight',
           dataIndex: _.dataIndex,
         })
+        i = _.dataIndex
       })
       this.chart.on('mouseout', () => {
         this.showMovie = true
       })
       this.intervalId = setInterval(() => {
-        if (!this.showMovie) { return }
+        if (!_this.showMovie) { return }
         if (i >= length) {
           i = 0
         }
@@ -47,18 +50,18 @@ class doAnimation {
         }
         for (let f = 0; f < series.length; f++) {
           for (let j = 0; j < length; j++) {
-            this.chart.dispatchAction({
+            _this.chart.dispatchAction({
               type: 'downplay',
               seriesIndex: f,
               dataIndex: j,
             })
           }
-          this.chart.dispatchAction({
+          _this.chart.dispatchAction({
             type: 'highlight',
             seriesIndex: f,
             dataIndex: i,
           })
-          this.chart.dispatchAction({
+          _this.chart.dispatchAction({
             type: 'showTip',
             seriesIndex: f,
             dataIndex: i,
