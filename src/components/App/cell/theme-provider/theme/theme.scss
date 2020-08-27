@@ -1,0 +1,41 @@
+/*
+* --primary-color           通用颜色
+* --header-font-color       顶部系统名称字体颜色
+* --header-font-color       顶部字体颜色
+* --header-top-bg-color     顶部背景颜色
+* --header-hover-color      顶部鼠标滑过导航栏颜色
+* --nav-font-color          一级导航栏字体颜色
+*/
+.theme-default{
+    --primary-color: #BC1802;
+    --header-title-color: #ccc;
+    --header-font-color: #999;
+    --header-top-bg-color: #000;
+    --header-hover-color: #fff;
+    --nav-font-color: #fff;
+}
+
+.theme-red{
+    --primary-color: #FF594B;
+    --header-title-color: #333;
+    --header-font-color: #333;
+    --header-top-bg-color: #fff;
+    --header-hover-color: #999;
+    --nav-font-color: #fff;
+}
+.theme-blue{
+    --primary-color:#1492FF;
+    --header-title-color: #333;
+    --header-font-color: #333;
+    --header-top-bg-color: #fff;
+    --header-hover-color: #999;
+    --nav-font-color: #fff;
+}
+.theme3{
+    --primary-color: #09f;
+    --header-title-color: #333;
+    --header-font-color: #333;
+    --header-top-bg-color: #fff;
+    --header-hover-color: #999;
+    --nav-font-color: #fff;
+}

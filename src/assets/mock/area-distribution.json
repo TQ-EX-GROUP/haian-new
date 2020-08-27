@@ -1,0 +1,30 @@
+[
+  {
+    "name":"重点",
+    "month":151,
+    "complement":131
+  },
+  {
+    "name":"出租",
+    "month":181,
+    "complement":121
+  },
+  {
+    "name":"群租",
+    "month":181,
+    "complement":141
+  },
+  {
+    "name":"群租1",
+    "month":181,
+    "complement":141
+  },{
+    "name":"群2租",
+    "month":181,
+    "complement":141
+  },{
+    "name":"群3租",
+    "month":181,
+    "complement":141
+  }
+]

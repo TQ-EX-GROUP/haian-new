@@ -1,0 +1,165 @@
+@import '../../../../../../node_modules/view-design/src/styles/index.less';
+
+// Color
+@primary-color : #BC1802;
+@info-color : #2db7f5;
+@success-color : #19be6b;
+@processing-color : red;
+@warning-color : #ff9900;
+@error-color : #ed4014;
+@normal-color : #e6ebf1;
+@link-color : #2D8cF0;
+@link-hover-color : tint(@link-color, 20%);
+@link-active-color : shade(@link-color, 5%);
+@selected-color : fade(#BC1802, 90%);
+@tooltip-color : #fff;
+@subsidiary-color : #808695;
+@rate-star-color : #f5a623;
+
+// Base
+@body-background : #fff;
+@component-background : #fff;
+@font-family : "PingFang SC",
+"Helvetica Neue",
+Helvetica,
+"Hiragino Sans GB",
+"Microsoft YaHei",
+"微软雅黑",
+Arial,
+sans-serif;
+@code-family : Consolas,
+Menlo,
+Courier,
+monospace;
+@title-color : #17233d;
+@text-color : #333;
+@line-height-computed : floor((@font-size-base * @line-height-base));
+
+// Border color
+@border-color-base : #eee; // outside
+@border-color-split : #eee; // inside
+@border-width-base : 1px; // width of the border for a component
+@border-style-base : solid; // style of a components border
+
+// Background color
+@background-color-base : #f7f7f7; // base
+@background-color-select-hover: @input-disabled-bg;
+@tooltip-bg : rgba(70, 76, 91, .9);
+@head-bg : #f9fafc;
+@table-thead-bg : #F5F5F5;
+@table-td-stripe-bg : #F5F5F5;
+@table-td-hover-bg : #fceae3;
+@table-td-highlight-bg : #ebf7ff;
+@menu-dark-title : #515a6e;
+@menu-dark-active-bg : #363e4f;
+@menu-dark-subsidiary-color : rgba(255, 255, 255, .7);
+@menu-dark-group-title-color : rgba(255, 255, 255, .36);
+@date-picker-cell-hover-bg : #e1f0fe;
+
+// Button
+@btn-font-weight : normal;
+@btn-group-border : shade(red, 5%);
+
+@btn-disable-color : #c5c8ce;
+@btn-disable-bg : @background-color-base;
+@btn-disable-border : @border-color-base;
+
+@btn-default-color : @text-color;
+@btn-default-bg : #fff;
+@btn-default-border : @border-color-base;
+
+// @btn-primary-color      : #fff;
+// @btn-primary-bg         : red;
+
+@btn-ghost-color : @text-color;
+@btn-ghost-bg : #fff;
+@btn-ghost-border : @border-color-base;
+
+
+// Layout and Grid
+@grid-columns : 24;
+@grid-gutter-width : 0;
+@layout-body-background : #f5f7f9;
+@layout-header-background : #515a6e;
+@layout-footer-background : @layout-body-background;
+@layout-sider-background : #fff;
+@layout-trigger-color : #fff;
+
+// Legend
+@legend-color : #999;
+
+// Input
+@input-placeholder-color : @btn-disable-color;
+@input-color : @text-color;
+@input-border-color : #ccc;
+@input-bg : #fff;
+@input-group-bg : #f8f8f9;
+
+@input-hover-border-color : red;
+@input-focus-border-color : red;
+@input-disabled-bg : #f3f3f3;
+
+// Slider
+@slider-color : tint(red, 20%);
+@slider-disabled-color : #ccc;
+
+// Avatar
+@avatar-bg: #ccc;
+@avatar-color: #fff;
+
+.combine-header-top .combine-header-tools li:hover a {
+    color: var(--header-hover-color);
+}
+
+.combine-header-top .combine-header-tools li a {
+    color: var(--header-font-color);
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    color: var(--primary-color)  !important;
+    border-right: 2px solid var(--primary-color)  !important;
+}
+
+.combine-sider .ivu-menu-item-selected span,
+.combine-sider .ivu-menu-item:hover span,
+.ivu-menu-item:hover i,
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner>.ivu-steps-icon,
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner span {
+    color: var(--primary-color)  !important;
+}
+
+.ivu-page-item-active,
+.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner,
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-tail>i:after,
+.ivu-radio-inner:after,
+.ivu-checkbox-checked .ivu-checkbox-inner {
+    background-color: var(--primary-color)  !important;
+    border-color: var(--primary-color)  !important;
+}
+
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner,
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner>.ivu-steps-icon,
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner span,
+.ivu-page-item:hover,
+.ivu-radio-checked .ivu-radio-inner {
+    border-color: var(--primary-color)  !important;
+}
+
+.ivu-menu-list,
+.ivu-layout-sider,
+.ivu-menu-vertical .ivu-menu-item:hover,
+.layout-footer-center,
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after,
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    background: #FFECE9 !important;
+}
+
+.ivu-input:focus {
+    border-color: var(--primary-color)  !important;
+    box-shadow: 0 0 0 2px fade(@primary-color, 20%) !important;
+}
+
+.ivu-page-item-active a,
+.ivu-page-item-active:hover a {
+    color: var(--nav-font-color)
+}
