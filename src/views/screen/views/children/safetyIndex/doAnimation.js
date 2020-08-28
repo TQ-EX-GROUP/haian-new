@@ -15,7 +15,7 @@ class doAnimation {
       const _this = this
       this.chart.on('mouseover', _ => {
         console.log(this)
-        this.showMovie = false
+        _this.showMovie = false
         for (let f = 0; f < series.length; f++) {
           _this.chart.dispatchAction({
             type: 'downplay',
@@ -29,7 +29,7 @@ class doAnimation {
         i = _.dataIndex
       })
       this.chart.on('mouseout', () => {
-        this.showMovie = true
+        _this.showMovie = true
       })
       this.intervalId = setInterval(() => {
         if (!_this.showMovie) { return }
